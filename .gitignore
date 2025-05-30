@@ -1,70 +1,337 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-.idea/
-dist
-# dependencies
+# ===========================
+# SECURITY - Environment Files
+# ===========================
+.env
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+
+# AWS Credentials
+.aws/
+aws-credentials.json
+credentials.json
+
+# ===========================
+# DEPENDENCIES
+# ===========================
+
+# Node.js
 node_modules/
-/.pnp
-.pnp.js
-.yarn/install-state.gz
-.vscode
-# testing
-/coverage
-dump.rdb
-chainlit.md
-.chainlit
-# next.js
-/.next/
-/out/
-.ipynb_checkpoints/
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
-# local env files
-# .env*.local
-*token.json*
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-*pyc*
-#*.env
-.ac
-agenthub/agents/youtube/db
-*credentials.json*
-
-venv/
-.venv/
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# ===================
-# ADDITIONAL RULES TO PREVENT FILE SIZE VIOLATIONS
-# ===================
-# Archive files (anywhere in the project)
-**/*.zip
-**/*.tar.gz
-**/*.tar
-**/*.tgz
-
-# Build caches and artifacts
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+.conda/
 .cache/
-*.pack
 
-# System packages
-*.deb
+# ===========================
+# BUILD OUTPUTS
+# ===========================
 
-# Python native libraries
-*.dylib
+# React build
+frontend/build/
+frontend/dist/
+frontend/.next/
+frontend/out/
 
-# Android SDK
-android-sdk/
+# Python build
+backend/build/
+backend/dist/
+backend/*.egg-info/
+
+# ===========================
+# LOGS & TEMPORARY FILES
+# ===========================
+
+# Logs
+*.log
+logs/
+*.log.*
+log/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ===========================
+# IDE & EDITOR FILES
+# ===========================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===========================
+# OS SPECIFIC FILES
+# ===========================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================
+# TESTING & QUALITY TOOLS
+# ===========================
+
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Linting
+.pylint.d/
+.eslintcache
+
+# ===========================
+# DATABASE & DATA FILES
+# ===========================
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Data files
+*.csv
+*.json
+*.xlsx
+*.xls
+data/
+datasets/
+
+# ===========================
+# DEPLOYMENT & INFRASTRUCTURE
+# ===========================
+
+# Docker
+.dockerignore
+Dockerfile.prod
+docker-compose.override.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes
+*.kubeconfig
+
+# ===========================
+# PACKAGE MANAGERS
+# ===========================
+
+# Yarn
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# npm
+package-lock.json
+.npm/
+
+# ===========================
+# DEVELOPMENT TOOLS
+# ===========================
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# ===========================
+# APPLICATION SPECIFIC
+# ===========================
+
+# Audio files (for Kaizen Voice Recorder)
+*.wav
+*.mp3
+*.webm
+*.ogg
+recordings/
+uploads/
+
+# AI model files
+*.pkl
+*.joblib
+models/
+
+# Configuration backups
+*.bak
+*.backup
+config.backup
+
+# ===========================
+# MISCELLANEOUS
+# ===========================
+
+# Certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large files
+*.iso
+*.dmg
+
+# Local configuration
+local_settings.py
+settings_local.py
+config_local.py
+
+# API documentation
+docs/_build/
+
+# Profiling
+.prof
+
+# End of .gitignore
