@@ -72,8 +72,8 @@ git push -u origin main
    ```
    MONGO_URL=mongodb+srv://kaizen-admin:YOUR_PASSWORD@kaizen-cluster.xxxxx.mongodb.net/kaizen_tracker?retryWrites=true&w=majority
    DB_NAME=kaizen_tracker
-   AWS_ACCESS_KEY_ID=AKIA3WUYYIFK6CB52S5A
-   AWS_SECRET_ACCESS_KEY=OJWvUUjJevpMPjB17Jz929PdVTYE/BHZkjRlWAe5
+   AWS_ACCESS_KEY_ID=
+   AWS_SECRET_ACCESS_KEY=
    AWS_REGION=eu-central-1
    S3_BUCKET_NAME=kaizen-voice-recordings
    ```
